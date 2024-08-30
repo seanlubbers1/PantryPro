@@ -72,33 +72,33 @@ handlers:
 
 ### 3. Deploy the Application
 
-    Authenticate your Google Cloud account:
+Authenticate your Google Cloud account:
 
-    ```bash
-    gcloud auth login
-    ```
+```bash
+gcloud auth login
+```
 
-    Set your project ID:
+Set your project ID:
 
-    ```bash
-    gcloud config set project YOUR_PROJECT_ID
-    ```
+```bash
+gcloud config set project YOUR_PROJECT_ID
+```
 
-    Deploy the app:
+Deploy the app:
 
-    ```bash
-    gcloud app deploy
-    ```
+```bash
+gcloud app deploy
+```
 
-    This command will deploy your application to Google App Engine. Follow the prompts and confirm when asked.
+This command will deploy your application to Google App Engine. Follow the prompts and confirm when asked.
 
 ### 4. Access Your Deployed App
 
-    Once the deployment is complete, you can access your app at:
+Once the deployment is complete, you can access your app at:
 
-    ```bash
-    https://YOUR_PROJECT_ID.appspot.com
-    ```
+```bash
+https://YOUR_PROJECT_ID.appspot.com
+```
 
 ## Usage
 
@@ -106,15 +106,15 @@ Once the app is deployed, users can interact with the AI by typing a message in 
 
 ## Folder Structure
 
-    ```plaintext
-    .
-    ├── app.py              # Main application file
-    ├── app.yaml            # App Engine configuration file
-    ├── templates
-    │   └── index.html      # HTML template for the frontend
-    ├── requirements.txt    # List of dependencies
-    └── README.md           # Project documentation
-    ```
+```plaintext
+.
+├── app.py              # Main application file
+├── app.yaml            # App Engine configuration file
+├── templates
+│   └── index.html      # HTML template for the frontend
+├── requirements.txt    # List of dependencies
+└── README.md           # Project documentation
+```
 
 ## Contributing
 
