@@ -49,6 +49,39 @@ Before you begin, ensure you have the following installed:
 
    Open your web browser and go to `http://localhost:8080`.
 
+## Replacing Images Using DALL-E via ChatGPT
+
+To replace an image in your web app using DALL-E through ChatGPT, follow these steps:
+
+1. **Generate an Image with DALL-E in ChatGPT:**
+
+   Use ChatGPT to generate an image using DALL-E. Describe the image you want to create, and ChatGPT will generate it for you.
+
+   Example prompt:
+
+   ```text
+   Create an image of a futuristic cityscape at sunset with flying cars and neon lights.
+   ```
+
+2. **Download the Generated Image:**
+
+   After ChatGPT generates the image, download it to your computer.
+
+3. **Save the Image to Your Project:**
+
+   Place the downloaded image in the `static/images` directory of your project.
+
+4. **Update the HTML File:**
+
+   Replace the image source in your `index.html` with the path to your new image.
+
+   ```html
+   <img
+     src="{{ url_for('static', filename='images/your_image_name.png') }}"
+     alt="Your New Image"
+   />
+   ```
+
 ## Deploying to Google App Engine
 
 ### 1. Set Up Your Google Cloud Project
