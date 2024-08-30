@@ -60,15 +60,15 @@ Before you begin, ensure you have the following installed:
 
 In the root directory of your project, create a file named `app.yaml` with the following content:
 
-    ```yaml
-    runtime: python310  # or your specific Python runtime version
+```yaml
+runtime: python310  # or your specific Python runtime version
 
-    instance_class: F2  # Optional: Specify instance class (e.g., F1, F2)
+instance_class: F2  # Optional: Specify instance class (e.g., F1, F2)
 
-    handlers:
-    - url: /.*
-      script: auto
-    ```
+handlers:
+- url: /.*
+    script: auto
+```
 
 ### 3. Deploy the Application
 
