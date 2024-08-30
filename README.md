@@ -1,4 +1,4 @@
-# Flask-OpenAI-Chatbot
+# Serverlesss GenAI Chatbot with OpenAI and App Engine
 
 This repository contains a simple but powerful web application that leverages the OpenAI GPT-4 model to create an AI-powered chatbot. The application is built with Flask and provides an easy-to-use interface where users can interact with the AI.
 
