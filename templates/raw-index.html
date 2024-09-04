@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean's Chatbot</title>
+    <title>🧑‍🍳 PantryPro 🥕</title>
 </head>
 <body>
     <div>
-        <h1>Sean's Super Cool Chatbot</h1>
-        <input type="text" id="message" placeholder="Type your message here">
+        <img id="static-image" src="{{ url_for('static', filename='images/DALL-E-image.png') }}" alt="Pantry Image">
+        <h1>🧑‍🍳 PantryPro 🥕</h1>
+        <input type="text" id="message" placeholder="What’s in your kitchen? List your ingredients 🍅">
         <button onclick="sendMessage()">Send</button>
         <p><strong>Response:</strong></p>
         <div id="response"></div>
@@ -25,6 +26,8 @@
                 body: JSON.stringify({ "message": message })
             });
             const data = await response.json();
+            
+            // Update the response text
             document.getElementById("response").innerText = data.response;
         }
     </script>

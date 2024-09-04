@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean's Super Cool Chatbot</title>
+    <title>🧑‍🍳 PantryPro 🥕</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -27,15 +27,18 @@
         }
 
         .chat-container img {
-            width: 100%; /* Adjust this to scale the image */
-            max-width: 300px; /* Maximum width */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 20px;
-            border-radius: 8px; /* Optional: Add rounded corners */
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 200px;
+            margin: 0 auto 20px auto;
+            display: block;
+            border-radius: 8px;
+            object-fit: contain;
         }
 
         h1 {
-            color: #10A37F; /* OpenAI green color for the heading */
+            color: #10A37F;
             font-size: 24px;
             margin-bottom: 20px;
         }
@@ -47,13 +50,13 @@
             border: 1px solid #ccc;
             margin-bottom: 10px;
             font-size: 16px;
-            box-sizing: border-box; /* Ensures padding is included in the width */
+            box-sizing: border-box;
         }
 
         button {
             width: 100%;
             padding: 10px;
-            background-color: #10A37F; /* OpenAI green color */
+            background-color: #10A37F;
             color: white;
             border: none;
             border-radius: 5px;
@@ -71,15 +74,15 @@
             background-color: #f1f1f1;
             border-radius: 5px;
             font-size: 16px;
-            text-align: left; /* Aligns the response text to the left */
+            text-align: left;
         }
     </style>
 </head>
 <body>
     <div class="chat-container">
-        <img src="{{ url_for('static', filename='images/DALL-E-image.png') }}" alt="Chatbot Image">
-        <h1>Sean's Super Cool Chatbot</h1>
-        <input type="text" id="message" placeholder="Type your message here">
+        <img id="static-image" src="{{ url_for('static', filename='images/DALL-E-image.png') }}" alt="Pantry Image">
+        <h1>🧑‍🍳 PantryPro 🥕</h1>
+        <input type="text" id="message" placeholder="What’s in your kitchen? List your ingredients 🍅">
         <button onclick="sendMessage()">Send</button>
         <p><strong>Response:</strong></p>
         <div id="response"></div>
@@ -96,6 +99,8 @@
                 body: JSON.stringify({ "message": message })
             });
             const data = await response.json();
+            
+            // Update the response text
             document.getElementById("response").innerText = data.response;
         }
     </script>

@@ -4,17 +4,17 @@ import openai
 app = Flask(__name__)
 
 # Set up your OpenAI API key
-openai.api_key = "<REPLACE_WITH_YOUR_KEY>"  # Replace with your actual API key
+openai.api_key = "<REPLACE_WITH_API_KEY>"  # Replace with your actual API key
 
 def generate_response(user_input):
     try:
+        modified_input = "Based on—but not limited to—the following ingredients, give me a recipe that I can create. Use emojis in the response, and limit the output to 150 tokens: " + user_input
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # Use the correct model name
+            model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": user_input}
+                {"role": "user", "content": modified_input}
             ],
-            max_tokens=150,
+            max_tokens=500,
             temperature=0.7,
         )
         return response.choices[0].message['content'].strip()
@@ -27,7 +27,7 @@ def index():
 
 @app.route('/favicon.ico')
 def favicon():
-    return '', 204  # Return no content, 204 status    
+    return '', 204  # Return no content, 204 status
 
 @app.route('/chat', methods=['POST'])
 def chat():
