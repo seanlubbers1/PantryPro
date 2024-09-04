@@ -3,7 +3,6 @@ import openai
 
 app = Flask(__name__)
 
-# Set up your OpenAI API key
 openai.api_key = "<REPLACE_WITH_API_KEY>"  # Replace with your actual API key
 
 def generate_response(user_input):

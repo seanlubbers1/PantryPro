@@ -1,4 +1,4 @@
-# Serverlesss GenAI Chatbot with OpenAI and App Engine
+# PantryPro: A Serverless GenAI Recipe Bot with OpenAI and App Engine
 
 This repository contains a simple yet powerful web application called **PantryPro**, which leverages the OpenAI GPT-4 model to generate recipes based on user-supplied ingredients. The application is built with Flask and provides an easy-to-use interface where users can input ingredients and receive creative recipe suggestions.
 
