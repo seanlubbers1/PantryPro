@@ -1,6 +1,6 @@
 # Serverlesss GenAI Chatbot with OpenAI and App Engine
 
-This repository contains a simple but powerful web application that leverages the OpenAI GPT-4 model to create an AI-powered chatbot. The application is built with Flask and provides an easy-to-use interface where users can interact with the AI.
+This repository contains a simple yet powerful web application called **PantryPro**, which leverages the OpenAI GPT-4 model to generate recipes based on user-supplied ingredients. The application is built with Flask and provides an easy-to-use interface where users can input ingredients and receive creative recipe suggestions.
 
 ## Features
 
@@ -94,12 +94,15 @@ To replace an image in your web app using DALL-E through ChatGPT, follow these s
 In the root directory of your project, create a file named `app.yaml` with the following content:
 
 ```yaml
-runtime: python310  # or your specific Python runtime version
+runtime: python39
 
-instance_class: F2  # Optional: Specify instance class (e.g., F1, F2)
+entrypoint: python app.py
 
 handlers:
-- url: /.*
+  - url: /static
+    static_dir: static
+
+  - url: /.*
     script: auto
 ```
 
