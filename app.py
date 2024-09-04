@@ -7,7 +7,9 @@ openai.api_key = "<REPLACE_WITH_API_KEY>"  # Replace with your actual API key
 
 def generate_response(user_input):
     try:
-        modified_input = "Based on—but not limited to—the following ingredients, give me a recipe that I can create. Use emojis in the response, and limit the output to 150 tokens: " + user_input
+            "Based on—but not limited to—the following ingredients, give me a recipe "
+            "that I can create. Use emojis in the response, and limit the output to 150 tokens: " 
+            + user_input
         response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
