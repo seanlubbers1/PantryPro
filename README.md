@@ -25,8 +25,9 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/Flask-OpenAI-Chatbot.git
-   cd Flask-OpenAI-Chatbot
+   git clone https://github.com/seanlubbers1/PantryPro.git
+   cd PantryPro
+
    ```
 
 2. **Install dependencies:**
@@ -60,7 +61,7 @@ To replace an image in your web app using DALL-E through ChatGPT, follow these s
    Example prompt:
 
    ```text
-   Create an image of a futuristic cityscape at sunset with flying cars and neon lights.
+   Create an image of a pantry of delicious ingredients
    ```
 
 2. **Download the Generated Image:**
